@@ -14,11 +14,10 @@ exports.showNumbers = (num) =>{
  2. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento que será um numero. Ex: 6;
     - Mostrar atraves do console.log() quais são so numeros pares existentes 
-      entre 0 e o numero recebido, incluindo o proprio numero se ele for par. Ex: 
+      entre 0 e o numero recebido, não incluindo o proprio numero se ele for par. Ex: 
       - console.log(0);
       - console.log(2);
       - console.log(4);
-      - console.log(6);
     - Deve ser feito atraves de um loop;
     - O numero ao ser identificado como par, deve ser imetiatamente mostrado.
 */
