@@ -14,11 +14,10 @@ exports.invertWord = (word) => {
     - Deve desconsiderar se a letra é maiuscula ou minuscula.
 */
 exports.isPalindrome = (word) => {
-    word = word.toLowerCase();
     let replaceChar = (string) => {
-        return string.replace(/[àáâãäå]/,"a").replace(/[èéêë]/,"e").replace(/[ç]/,"c");
+        return string.split(' ').join('').toLowerCase().replace(/[àáâãäå]/,"a").replace(/[èéêë]/,"e").replace(/[íìîï]/,"i").replace(/[óòôõö]/,"o").replace(/[úùûü]/,"o").replace(/[ç]/,"c").replace(/,/,'').replace(/-/,'').replace(/_/,'');
     };
-    return word == replaceChar(word).split('').reverse().join('');
+    return replaceChar(word) == replaceChar(word).split('').reverse().join('');
 };
 
 /*
