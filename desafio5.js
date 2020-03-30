@@ -3,9 +3,12 @@
     - A função deve receber 1 argumento que será uma ingrediente. Ex: Queijo;
     - Importar a lista de ingredientes do arquivo ingredients.js;
     - Filtrar a palavra passada como argumento dentro da lista de ingredientes;
-    - Retornar "Encontrado" de a palavra for encontrada e "Não encontrada" se não for encontrada;
-    - A pesquisa deve desconsiderar se o ingrediente contem letras maiusculas, ou seja;
+    - Retornar "Encontrado" se a palavra for encontrada e "Não encontrado" se não for encontrada;
+    - A pesquisa deve desconsiderar se o ingrediente contém letras maiúsculas, ou seja;
       - Se pesquisar: Queijo, queijo ou QuEiJo. O resultado deve ser "Encontrado"
 */
 
-exports.ingredientsFilter = null
+exports.ingredientsFilter = (ingredient) => {
+    const ingredients = require('./ingredients.js');
+    return ingredients.find(e => e.toLowerCase() == ingredient.toLowerCase()) ? "Encontrado" : "Não Encontrado";
+};
