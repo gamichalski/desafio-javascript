@@ -3,14 +3,21 @@
     - A função deve receber 2 argumentos;
     - O retorno das funcão deve ser a soma dos dois parametros passados.
 */
-exports.sum = null
+
+const soma = function(num1, num2){
+  return num1 + num2;
+}
+exports.sum = soma;
 
 /*
  2. Crie uma função com as seguintes características:
     - A função deve receber 2 argumentos, nome e sobrenome;
     - O retorno das funcão deve ser juncão(cancatenacão) dos dois parametros passados e retonar o nome completo.
 */
-exports.fullname = null;
+const nomecompleto  = function(nome, sobrenome){
+    return nome + ' ' + sobrenome;
+}
+exports.fullname = nomecompleto;
 
 /*
  3. Crie uma função com as seguintes características:
@@ -19,7 +26,15 @@ exports.fullname = null;
       - "Preencha todos os valores corretamente!"
     - O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-exports.calculate = null
+const multiplicacao = function(num1, num2, num3){
+    if(num1 != null && num2 != null && num3 != null){
+    return (num1 * num2 * num3) + 2;
+    }
+    else{
+        return 'Preencha todos os valores corretamente!';
+    }
+}
+exports.calculate = multiplicacao;
 
 /*
  4. Crie uma função com as seguintes características:
@@ -29,11 +44,38 @@ exports.calculate = null
     - Se todos os argumentos forem passados, retorne a soma do primeiro com o segundo, e o resultado, dividido pelo terceiro.
     - Se nenhum argumento for passado, retorne o valor booleano `false`.
 */
-exports.calculatev2 = null
+const multiplicacaov2 = function(num1, num2, num3){
+    let vetor = [num1, num2, num3];
+    vetor = vetor.filter(valor => {
+        if (valor != undefined){
+            return true;
+        }else{
+            return false;
+        }
+    })
+
+    if(vetor.length == 3){
+        return (vetor[0] + vetor[1])/vetor[2]
+    }else if(vetor.length == 2){
+        return vetor[0] + vetor[1];
+    }else if(vetor.length == 1){
+        return vetor[0];
+    }else{
+        return false;
+    }
+}
+exports.calculatev2 = multiplicacaov2;
 
 /*
  5. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento;
     - O retorno das funcão deve ser um boolean indicando se o numero passado é um numero par ou não.
 */
-exports.isPair = null
+const ehPar = function(num){
+    if(num % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+exports.isPair = ehPar;

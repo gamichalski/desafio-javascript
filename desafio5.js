@@ -7,5 +7,14 @@
     - A pesquisa deve desconsiderar se o ingrediente contem letras maiusculas, ou seja;
       - Se pesquisar: Queijo, queijo ou QuEiJo. O resultado deve ser "Encontrado"
 */
+var lista = require('./ingredients.js');
 
-exports.ingredientsFilter = null
+
+const filtroIngredientes = function(ingrediente){
+    if(lista.findIndex(item => item.toLocaleLowerCase() == ingrediente.toLocaleLowerCase()) != -1){
+        return 'Encontrado';
+    }else{
+        return 'Não Encontrado';
+    }
+}
+exports.ingredientsFilter = filtroIngredientes; 
