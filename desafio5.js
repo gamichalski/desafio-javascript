@@ -7,5 +7,15 @@
     - A pesquisa deve desconsiderar se o ingrediente contem letras maiusculas, ou seja;
       - Se pesquisar: Queijo, queijo ou QuEiJo. O resultado deve ser "Encontrado"
 */
-
-exports.ingredientsFilter = null
+exports.ingredientsFilter = function ingredientsFilter(ingrediente) {
+    const ingredientes = require('./ingredients');
+    let ingredientesLowerCase = [];
+        ingredientes.forEach(element => { 
+            ingredientesLowerCase.push(element.toLowerCase()) 
+        });
+    if (ingredientesLowerCase.indexOf(ingrediente.toLowerCase()) != -1) {
+        return "Encontrado";
+    } else {
+        return "Não Encontrado";
+    }
+}
