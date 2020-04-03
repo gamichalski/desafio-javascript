@@ -26,9 +26,9 @@ exports.fullname = function(nome, sobrenome) {
 exports.calculate = function(x, y, z) {
     if (x && y && z) {
         return (x * y * z) + 2;
-    } else {
-        return 'Preencha todos os valores corretamente!'
-    }
+    } 
+    return 'Preencha todos os valores corretamente!'
+    
 };
 
 /*

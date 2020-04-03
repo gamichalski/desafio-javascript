@@ -11,9 +11,5 @@
 exports.ingredientsFilter = function(ingrediente) {
     const listaIngredientes = require('./ingredients.js');
 
-    let ingredienteTratado = ingrediente.toLowerCase().split('');
-    ingredienteTratado[0] = ingredienteTratado[0].toUpperCase();
-    ingredienteTratado = ingredienteTratado.join('');
-
-    return listaIngredientes.find(item => item === ingredienteTratado) ? 'Encontrado' : 'Não encontrado';
+    return listaIngredientes.find(item => item.trim().toLowerCase() === ingrediente.trim().toLowerCase()) ? 'Encontrado' : 'Não encontrado';
 };
