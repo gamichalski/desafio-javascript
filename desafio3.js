@@ -2,9 +2,16 @@
  1. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento que será um numero;
     - Mostrar de forma crescente atraves do console.log() os numeros existentes 
-      de 1 até o numero passado como parametro, incluindo 1 e o numero passado como parametro.
+      de 1 até o numero passado como parametro, incluindo 1 e o numero passado como parametro. 3
 */
-exports.showNumbers = null
+
+const mostreNumeros = function(num){
+    let i;
+    for(i = 1; i <= num; i++){
+        console.log(i);
+    }
+}
+exports.showNumbers = mostreNumeros;
 
 /*
  2. Crie uma função com as seguintes características:
@@ -16,14 +23,26 @@ exports.showNumbers = null
       - console.log(4);
       - console.log(6);
     - Deve ser feito atraves de um loop;
-    - O numero ao ser identificado como par, deve ser imetiatamente mostrado.
+    - O numero ao ser identificado como par, deve ser imetiatamente mostrado. 2
 */
-exports.showPairNumbers = null
 
+const numerosPares = function(num){
+    let i;
+    for(i = 0; i < num; i++){
+        if(i % 2 == 0){
+            console.log(i);
+        }
+    }
+}
+exports.showPairNumbers = numerosPares;
 /*
  3. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento que será um array com numeros. Ex: [0,1,2,5,9,8,6,4];
     - Retornar um array apenas com os numeros que são pares;
-    - Deve ser feito usando a função filter do array. Ex: numbers.filter(...).
+    - Deve ser feito usando a função filter do array. Ex: numbers.filter(...). 3
 */
-exports.filterPairNumbers = null
+const filtrarNumeroPar = function(vetor = [0, 1, 2, 5, 9, 8, 6, 4]){
+    return vetor.filter(valor => valor % 2 == 0);
+}
+
+exports.filterPairNumbers = filtrarNumeroPar;
