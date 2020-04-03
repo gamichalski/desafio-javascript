@@ -1,11 +1,15 @@
-/*
- 1. Crie uma função com as seguintes características:
+/*1. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento que será um numero;
     - Mostrar de forma crescente atraves do console.log() os numeros existentes 
       de 1 até o numero passado como parametro, incluindo 1 e o numero passado como parametro.
 */
-exports.showNumbers = null
-
+exports.showNumbers = function showNumbers(num1) {
+    let num = 0;
+    for (i = 0; i < num1 ;i++) {
+        num += 1;
+        console.log(num);
+     }
+}     
 /*
  2. Crie uma função com as seguintes características:
     - A função deve receber 1 argumento que será um numero. Ex: 6;
@@ -18,7 +22,16 @@ exports.showNumbers = null
     - Deve ser feito atraves de um loop;
     - O numero ao ser identificado como par, deve ser imetiatamente mostrado.
 */
-exports.showPairNumbers = null
+exports.showPairNumbers = function showPairNumbers(num){
+    let numPar;
+    for (i = 0; i < num ;i++) {
+        if ( (i % 2) == 0 ) {
+        numPar = i;
+        console.log(numPar);
+        }
+    
+    }
+}
 
 /*
  3. Crie uma função com as seguintes características:
@@ -26,4 +39,6 @@ exports.showPairNumbers = null
     - Retornar um array apenas com os numeros que são pares;
     - Deve ser feito usando a função filter do array. Ex: numbers.filter(...).
 */
-exports.filterPairNumbers = null
+exports.filterPairNumbers = function filterPairNumbers(array){
+    return array.filter(function(element) { return (element%2 == 0) })     
+}
