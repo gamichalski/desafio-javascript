@@ -6,3 +6,6 @@
   desafio3.showNumbers(5)
   
 */
+
+const desafio5 = require('./desafio5.js');
+desafio5.ingredientsFilter("queijo")
