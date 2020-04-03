@@ -3,7 +3,9 @@
     - A função deve receber 1 argumento que será uma palavra. Ex: Anderson;
     - Retornar a palava invertida. Ex: nosrednA
 */
-exports.invertWord = null
+exports.invertWord = (word) => {
+    return word.split('').reverse().join('');
+};
 
 /*
  2. Crie uma função com as seguintes características:
@@ -11,7 +13,12 @@ exports.invertWord = null
     - Deve retornar true se a palavra for um palindromo;
     - Deve desconsiderar se a letra é maiuscula ou minuscula.
 */
-exports.isPalindrome = null
+exports.isPalindrome = (word) => {
+    let replaceChar = (string) => {
+        return string.split(' ').join('').toLowerCase().replace(/[àáâãäå]/,"a").replace(/[èéêë]/,"e").replace(/[íìîï]/,"i").replace(/[óòôõö]/,"o").replace(/[úùûü]/,"o").replace(/[ç]/,"c").replace(/,/,'').replace(/-/,'').replace(/_/,'');
+    };
+    return replaceChar(word) == replaceChar(word).split('').reverse().join('');
+};
 
 /*
  3. Crie uma função com as seguintes características:
@@ -22,4 +29,9 @@ exports.isPalindrome = null
     - Deve retornar o resultado;
   OBS: Devem ser utilizados as funções necessarias de manipulação de array (push, shift, unshift, ...)
 */
-exports.fruits = null
+exports.fruits = (arrFruits) => {
+    arrFruits.push('kiwi');
+    arrFruits.shift();
+    arrFruits.unshift('goiaba');
+    return arrFruits;
+};
