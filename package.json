@@ -13,6 +13,6 @@
     "chalk": "3.0.0",
     "intercept-stdout": "0.1.2",
     "jest": "25.2.3",
-    "minimist": "1.2.5"
+    "minimist": "1.2.6"
   }
 }
